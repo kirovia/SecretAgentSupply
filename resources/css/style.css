@@ -7,6 +7,7 @@ html {
 
 .sitecontainer {
   width: 960px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -14,6 +15,7 @@ html {
 
 .logobanner {
   background-color: black;
+  width: 100%;
 }
 
 .logobanner .sitecontainer {
@@ -35,6 +37,7 @@ html {
 
 .mainbanner {
   height: 25rem;
+  width: 100%;
   background-image: url("../images/moto.jpeg");
   background-size: cover;
 }
@@ -44,6 +47,7 @@ html {
 }
 
 .mainbannerbox {
+  height: auto;
   width: 20rem;
   background-color: black;
   color: white;
@@ -63,6 +67,8 @@ html {
 /* Navigation Banner */
 
 .navbanner {
+  height: auto;
+  width: 100%;
   background-color: firebrick;
 }
 
@@ -86,7 +92,14 @@ a {
 
 /* Product Grid */
 
+.productgrid {
+  height: auto;
+  width: 100%;
+}
+
 .productgrid .sitecontainer {
+  height: 100%;
+  width: 960px;
   margin: 3rem auto;
   display: flex;
   justify-content: space-between;
@@ -105,8 +118,7 @@ a {
 .pen img, .watch img, .glasses img {
   height: auto;
   width: 9rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
 }
 
 .pen p, .watch p, .glasses p {
@@ -119,7 +131,13 @@ a {
 
 /* Location and Hours */
 
+.locationhours {
+  height: auto;
+  width: 100%;
+}
+
 .locationhours .sitecontainer {
+  height: 100%;
   padding: 3rem 0 4rem 0;
   display: flex;
   justify-content: space-between;
@@ -143,36 +161,31 @@ a {
 
 footer {
   height: 10rem;
+  width: 100%;
   background-color: black;
   color: white;
 }
 
 footer .sitecontainer {
-  height: 100%;
   display: flex;
   align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
-  li.web {
-    display: none;
-  }
-
-  li.tablet {
-    display: inherit;
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  li.web {
-    display: none;
-  }
-  li.tablet {
-    display: inherit;
+  .navbanner .sitecontainer {
+    width: 100%;
   }
   ul {
     justify-content: center;
+  }
+  li.web {
+    display: none;
+  }
+  li.tablet {
+    display: inherit;
+  }
+  .productgrid .sitecontainer {
+    width: 100%;
   }
   .glasses {
     display: none;
@@ -180,16 +193,50 @@ footer .sitecontainer {
   .pen, .watch {
     width: 47%;
   }
-}
-
-@media only screen and (max-width: 470px) {
-  .mainbannerbox {
+  .locationhours .sitecontainer {
     width: 100%;
   }
-  .mainbannerbox h1 {
-    font-size: 0.77rem;
-  }
-  .mainbannerbox h2 {
-    font-size: 1rem;
-  }
 }
+ @media only screen and (max-width: 480px) {
+   .mainbanner {
+     width: 100%;
+     height: 15rem;
+   }
+   .mainbanner .sitecontainer {
+     width: 100%;
+   }
+   .mainbannerbox {
+     width: 100%;
+   }
+   .mainbannerbox h1 {
+     font-size: 0.77rem;
+     padding: 1rem 0 0 2rem;
+   }
+   .mainbannerbox h2 {
+     font-size: 1rem;
+     padding: 0 0 1rem 2rem;
+   }
+   .productgrid .sitecontainer {
+     justify-content: center;
+   }
+   .watch {
+     display: none;
+   }
+   .pen {
+     width: 90%;
+   }
+   .locationhours {
+     width: 100%;
+   }
+   .locationhours .sitecontainer {
+     flex-direction: column;
+     align-items: center;
+   }
+   p.infotop, p.infobottom {
+     width: 90%;
+   }
+   footer .sitecontainer {
+     width: 100%;
+     justify-content: center;
+   }
+ }
