@@ -1,0 +1,195 @@
+/* Universal Styling */
+
+html {
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
+.sitecontainer {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Logo Banner */
+
+.logobanner {
+  background-color: black;
+}
+
+.logobanner .sitecontainer {
+  display: flex;
+  align-items: center;
+}
+
+.logobanner img {
+  height: 1.5rem;
+  margin: 0.66rem 1rem 0.66rem 0.5rem;
+}
+
+.logobanner h1 {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Main Banner */
+
+.mainbanner {
+  height: 25rem;
+  background-image: url("../images/moto.jpeg");
+  background-size: cover;
+}
+
+.mainbanner .sitecontainer {
+  padding-top: 9rem;
+}
+
+.mainbannerbox {
+  width: 20rem;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.mainbannerbox h1 {
+  font-size: 1rem;
+  padding: 2rem 0 0.25rem 3rem;
+}
+
+.mainbannerbox h2 {
+  font-size: 2rem;
+  padding: 0 0 2rem 3rem;
+}
+
+/* Navigation Banner */
+
+.navbanner {
+  background-color: firebrick;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  padding: 0.75rem 0;
+}
+
+li.tablet {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Product Grid */
+
+.productgrid .sitecontainer {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pen, .watch, .glasses {
+  border: 4px solid black;
+  width: 30%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pen img, .watch img, .glasses img {
+  height: auto;
+  width: 9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pen p, .watch p, .glasses p {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+/* Location and Hours */
+
+.locationhours .sitecontainer {
+  padding: 3rem 0 4rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.locationhours .sitecontainer .info {
+  width: 35%;
+}
+
+.locationhours .sitecontainer p.infotop {
+  background-color: black;
+  color: white;
+  padding: 1rem 0 1rem 2rem;
+}
+
+.locationhours p.infobottom {
+  padding-top: 0.25rem;
+}
+
+/* Footer */
+
+footer {
+  height: 10rem;
+  background-color: black;
+  color: white;
+}
+
+footer .sitecontainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  li.web {
+    display: none;
+  }
+
+  li.tablet {
+    display: inherit;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  li.web {
+    display: none;
+  }
+  li.tablet {
+    display: inherit;
+  }
+  ul {
+    justify-content: center;
+  }
+  .glasses {
+    display: none;
+  }
+  .pen, .watch {
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .mainbannerbox {
+    width: 100%;
+  }
+  .mainbannerbox h1 {
+    font-size: 0.77rem;
+  }
+  .mainbannerbox h2 {
+    font-size: 1rem;
+  }
+}
